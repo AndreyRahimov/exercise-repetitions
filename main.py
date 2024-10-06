@@ -15,10 +15,12 @@ def main(repetitions_amount: int, repetition_duration: int = 5) -> None:
         - Plays the "switch.wav" sound between repetitions.
         - Plays the "finish.wav" sound after the final repetition."""
 
+    print("Repetition: 1")
     play_sound("start.wav")
     time.sleep(repetition_duration)
 
     for i in range(repetitions_amount - 1):
+        print(f"Repetition: {i + 2}")
         play_sound("switch.wav")
         time.sleep(repetition_duration)
 
